@@ -54,6 +54,10 @@ public class Main {
 
         httpPOST(path,nvps);
 
+        String url = "https://house-on-sale.focus.cn/subscribe/4354127744/homepage";
+        httpGet(url);
+
+
     }
 
 
@@ -68,10 +72,30 @@ public class Main {
         return HttpClients.custom().setSSLSocketFactory(sslSf).build();
     }
 
-    public void httpGet(String url) {
+    public static void httpGet(String url) {
         try{
             CloseableHttpClient httpClient = createHttpClient();
+            HashMap<String, String> headers = new HashMap<String, String>();
+
+            headers.put("Referer", "https://servicewechat.com/wxfb1955c7ce7fc4b5/26/page-frame.html");
+            headers.put("User-Agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.3(0x17000321) NetType/WIFI Language/zh_CN ");
+            headers.put("Accept","*/*");
+            headers.put("Accept-Language","zh-cn");
+            headers.put("Host","house-on-sale.focus.cn");
+            headers.put("Accept-Charset","utf-8;q=0.7,*;q=0.7");
+            headers.put("Connection","keep-alive");
+            headers.put("Content-Type","application/x-www-form-urlencoded");
+            headers.put("Cache-Control","max-age=0");
+            headers.put("Cookie","87a4bcbf0b1ea517_gr_session_id=963cb87d-541d-4f9b-bd76-30bff8642d75; 87a4bcbf0b1ea517_gr_session_id_963cb87d-541d-4f9b-bd76-30bff8642d75=true; gr_user_id=94e9cda8-97ea-4955-916d-4ea792a008d3; sale_user_id=9354678420; sale_user_token=6b6cab50c6efaeae790eb82e4b6ae91b; focus_login_captcha=d487c2e1-bc0a-450e-a1cf-655896be318d; grwng_uid=0f8d32ea-b031-4ce7-8a6d-b7c0dbe4bd9b");
+
             HttpGet httpGet = new HttpGet(url);
+
+            for(Map.Entry<String, String> entry: headers.entrySet())
+            {
+                System.out.println("Key: "+ entry.getKey()+ " Value: "+entry.getValue());
+                httpGet.addHeader(entry.getKey(),entry.getValue());
+            }
+
             try (CloseableHttpResponse httpResponse = httpClient.execute(httpGet)) {
                 HttpEntity entity = httpResponse.getEntity();
                 String result = EntityUtils.toString(entity,"UTF-8");

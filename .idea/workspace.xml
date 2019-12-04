@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6550da05-5bbe-4489-93be-f9b16f210a89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_62.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WechatQiang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WechatQiang.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/noca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/noca/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/noca/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/noca/Main.class" afterDir="false" />
     </list>
@@ -87,7 +83,8 @@
       <option name="presentableId" value="Default" />
       <updated>1575391787826</updated>
       <workItem from="1575391791846" duration="1037000" />
-      <workItem from="1575474008110" duration="3841000" />
+      <workItem from="1575474008110" duration="3964000" />
+      <workItem from="1575478616967" duration="264000" />
     </task>
     <servers />
   </component>
@@ -99,7 +96,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
