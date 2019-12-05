@@ -1,0 +1,11 @@
+.idea
+.idea/*
+target
+*.iml
+logs
+.DS_Store
+idl/target
+.idea/
+images/
+.ipynb_checkpoints/
+__pycache__/
